@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Kiparo PizzaApp</string>
+    <string name="auth_title">PizzaApp</string>
+    <string name="pizza">pizza</string>
+    <string name="enjoy">Enjoy</string>
+    <string name="your_meal">YourMeal!</string>
+    <string name="get_started">Get Started</string>
+    <string name="login">Login</string>
+</resources>
