@@ -1,28 +1,21 @@
 package com.kiparo.pizzaapp.presentation.features.start
 
-import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.SpanStyle
@@ -30,7 +23,6 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import com.kiparo.pizzaapp.R
 import com.kiparo.pizzaapp.core.design.theme.KiparoPizzaAppTheme
 import com.kiparo.pizzaapp.core.design.theme.height_264
@@ -38,8 +30,8 @@ import com.kiparo.pizzaapp.core.design.theme.height_46
 import com.kiparo.pizzaapp.core.design.theme.height_75
 import com.kiparo.pizzaapp.core.design.theme.padding_32
 import com.kiparo.pizzaapp.core.design.theme.padding_40
+import com.kiparo.pizzaapp.core.design.theme.padding_72
 import com.kiparo.pizzaapp.core.design.theme.width_104
-import com.kiparo.pizzaapp.core.design.theme.width_216
 import com.kiparo.pizzaapp.core.design.theme.width_264
 
 
@@ -60,7 +52,7 @@ fun StarterScreen(
             ),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        topTitle(
+        TopTitle(
             modifier = Modifier
                 .padding(top = padding_32)
                 .fillMaxWidth()
@@ -72,7 +64,7 @@ fun StarterScreen(
 }
 
 @Composable
-fun topTitle(modifier: Modifier) {
+fun TopTitle(modifier: Modifier) {
     Image(
         modifier = modifier.size(width = width_104, height = height_75),
         painter = painterResource(id = R.drawable.donut),
@@ -111,8 +103,8 @@ fun bottomContent() {
     )
     Button(
         modifier = Modifier
-            .padding(top = padding_40)
-            .size(width = width_216, height = height_46),
+            .padding(top = padding_40, start = padding_72, end = padding_72)
+            .height(height_46).fillMaxWidth(),
         colors = ButtonDefaults.buttonColors(
             containerColor = MaterialTheme.colorScheme.secondary
         ),
